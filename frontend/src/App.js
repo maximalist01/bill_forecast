@@ -136,7 +136,7 @@
 import React, { useEffect, useState } from "react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 import BillingInfo from "./components/BillingInfo";
-import "./style.css"; // Import the CSS
+import "./style.css";
 
 function App() {
   const [forecastData, setForecastData] = useState({
@@ -167,8 +167,8 @@ function App() {
       if (!response.ok) throw new Error("Error fetching forecast data");
 
       const data = await response.json();
-      setBillingInfo(data.billing_info); // Store billing info
-      fetchForecastData(); // Fetch forecast data for chart
+      setBillingInfo(data.billing_info);
+      fetchForecastData();
     } catch (error) {
       console.error("Error:", error);
     }
@@ -199,69 +199,6 @@ function App() {
   ].sort((a, b) => new Date(a.DateTime) - new Date(b.DateTime)); // Sort by DateTime
 
   return (
-    // <div className="app-container">
-    //   <h1>Energy Forecasting</h1>
-    //   <form onSubmit={handleSubmit} className="forecast-form">
-    //     <label>
-    //       Start Date:
-    //       <input
-    //         type="date"
-    //         value={startDate}
-    //         onChange={(e) => setStartDate(e.target.value)}
-    //         required
-    //       />
-    //     </label>
-    //     <label>
-    //       End Date:
-    //       <input
-    //         type="date"
-    //         value={endDate}
-    //         onChange={(e) => setEndDate(e.target.value)}
-    //         required
-    //       />
-    //     </label>
-    //     <label>
-    //       Forecast Hours:
-    //       <input
-    //         type="number"
-    //         value={forecastHours}
-    //         onChange={(e) => setForecastHours(e.target.value)}
-    //         min="1"
-    //         required
-    //       />
-    //     </label>
-    //     <button type="submit">Get Billing Info</button>
-    //   </form>
-
-    //   {billingInfo && <BillingInfo billingInfo={billingInfo} />}
-
-    //   {combinedData.length > 0 ? (
-    //     <div className="chart-container">
-    //       <h2>kVAh Comparison</h2>
-    //       <LineChart
-    //         width={1200}
-    //         height={600}
-    //         data={combinedData}
-    //         margin={{ top: 10, right: 30, left: 20, bottom: 10 }}
-    //       >
-    //         <CartesianGrid strokeDasharray="3 3" />
-    //         <XAxis dataKey="DateTime" />
-    //         <YAxis />
-    //         <Tooltip />
-    //         <Legend />
-    //         <Line type="monotone" dataKey="kVah_diff" stroke="#8884d8" name="Actual kVAh" />
-    //         <Line
-    //           type="monotone"
-    //           dataKey="Forecasted_kVah"
-    //           stroke="#82ca9d"
-    //           name="Forecasted kVAh"
-    //         />
-    //       </LineChart>
-    //     </div>
-    //   ) : (
-    //     <div>Loading data...</div>
-    //   )}
-    // </div>
     <div className="app-container">
       <h1>Energy Forecasting</h1>
       <form onSubmit={handleSubmit}>
