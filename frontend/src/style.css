@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* App Container */
+.app-container {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #4b6584;
+}
+
+/* Form Container */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #4b6584;
+}
+
+input[type="date"],
+input[type="number"],
+button {
+  padding: 10px;
+  border: 1px solid #dcdde1;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4b6584;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3b516a;
+}
+
+/* Center Form Box */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Chart Section */
+.chart-container {
+  margin: 30px auto;
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+}
+
+.chart-title {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #4b6584;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Billing Info Container */
+.billing-info-container {
+  margin-top: 24px;
+  padding: 16px;
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.billing-info-container h2 {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #4b6584;
+}
+
+.billing-info-container div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.billing-info-container div:last-of-type {
+  margin-top: 16px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #2f3640;
+}
+
+.total-charges {
+  text-align: center;
+  margin-top: 12px;
+  padding: 10px;
+  background-color: #4b6584;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+/* Tooltip and Legend Styling */
+.recharts-tooltip-wrapper {
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.recharts-legend-item {
+  color: #4b6584;
+  font-weight: bold;
+}
